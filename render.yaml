@@ -1,0 +1,22 @@
+services:
+  - type: web
+    name: bot-inmobiliaria
+    env: node
+    plan: starter
+    startCommand: "node server.js"
+    autoDeploy: true
+    envVars:
+      - key: VERIFY_TOKEN
+        sync: false
+      - key: WHATSAPP_TOKEN
+        sync: false
+      - key: PHONE_NUMBER_ID
+        sync: false
+      - key: GRAPH_API_VERSION
+        value: v19.0
+      - key: AIRTABLE_API_KEY
+        sync: false
+      - key: AIRTABLE_BASE_ID
+        sync: false
+      - key: AIRTABLE_TABLE
+        value: Leads
